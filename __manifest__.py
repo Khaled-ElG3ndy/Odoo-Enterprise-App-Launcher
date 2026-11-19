@@ -1,6 +1,6 @@
 {
     "name": "Custom Web App Launcher",
-    "version": "19.0.1.0.1",
+    "version": "19.0.1.0.2",
     "category": "Hidden",
     "summary": "Open a full app launcher from the backend Apps navbar icon",
     "author": "TelNova",

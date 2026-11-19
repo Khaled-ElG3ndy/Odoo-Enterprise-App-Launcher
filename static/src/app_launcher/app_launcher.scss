@@ -261,3 +261,48 @@
         padding-top: 72px;
     }
 }
+
+// ---------------------------------------------------------------------------
+// General rule: every primary action uses the same filled brand colour.
+// Odoo 19 renders some primary actions differently from the list/kanban "New"
+// button: the form view "New" is .btn-outline-primary, and the current step of
+// a statusbar uses the grey btn-secondary "active" colours. Align them all.
+// ---------------------------------------------------------------------------
+.o_web_client {
+    .o_control_panel .btn-outline-primary,
+    .o_form_button_create.btn-outline-primary {
+        --btn-color: #fff;
+        --btn-bg: #714b67;
+        --btn-border-color: #714b67;
+        --btn-hover-color: #fff;
+        --btn-hover-bg: #5f3f57;
+        --btn-hover-border-color: #5f3f57;
+        --btn-active-color: #fff;
+        --btn-active-bg: #5f3f57;
+        --btn-active-border-color: #5f3f57;
+        border-color: #714b67;
+        background-color: #714b67;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: #5f3f57;
+            background-color: #5f3f57;
+            color: #fff;
+        }
+    }
+
+    .o_field_statusbar > .o_statusbar_status > .o_arrow_button.o_arrow_button_current {
+        --o-statusbar-background-active: #714b67;
+        --o-statusbar-border-active: #714b67;
+        --btn-disabled-color: #fff;
+        color: #fff;
+
+        &:disabled,
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+}
